@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan | Kenya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="original-page antialiased selection:bg-red-600 selection:text-white">
+  <nav class="original-nav fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center mix-blend-difference text-white transition-all duration-300">
+    <a href="index.html" class="text-2xl font-bold tracking-tighter hover-trigger cursor-pointer" data-cursor="hovered"><span class="text-red-600">K</span>ENYA<span class="text-green-600">.</span></a>
+    <div class="hidden md:flex gap-5 font-mono text-xs tracking-widest">
+      <a href="music.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">MUSIC</a>
+      <a href="food.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">FOOD</a>
+      <a href="culture.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">CULTURE</a>
+      <a href="plan.html" class="text-red-500 transition-colors hover-trigger" data-cursor="hovered">PLAN</a>
+      <a href="constitution.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">CONSTITUTION</a>
+      <a href="about.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">ABOUT</a>
+    </div>
+    <a href="#planner" class="border border-white px-4 py-2 text-xs font-bold hover:bg-white hover:text-black transition-all hover-trigger" data-cursor="hovered">VISIT NOW</a>
+  </nav>
+
+  <main class="pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-black to-[#050f08] min-h-screen">
+    <div class="mb-16 border-b border-white/10 pb-8">
+      <h3 class="font-mono text-green-500 mb-2">INTERACTIVE 04</h3>
+      <h1 class="text-7xl md:text-9xl font-bold glitch" data-text="THE ROUTE">THE ROUTE</h1>
+      <p class="font-serif text-xl text-gray-400 mt-4 max-w-2xl">Build a trip board that saves locally in your browser. No dead CTA, no fake submit screen.</p>
+    </div>
+
+    <section id="kenya-live-map" class="kenya-map-explorer mb-12" data-google-map-explorer>
+      <div class="map-brief">
+        <div>
+          <p class="font-mono text-red-500 text-xs tracking-widest mb-2">LIVE GOOGLE PLACES EXPLORER</p>
+          <h2 class="text-4xl md:text-6xl font-bold leading-none">PICK PLACES BY PHOTO</h2>
+          <p class="font-serif text-gray-400 mt-3 max-w-3xl">Search real Kenyan places, then browse hotels, parks, restaurants, beaches, and nightlife as a photo grid. Details and directions stay live without taking over this page with a map.</p>
+        </div>
+        <div class="map-key-panel">
+          <label class="font-mono text-xs text-gray-400 tracking-widest" for="maps-api-key">GOOGLE MAPS API KEY</label>
+          <div class="map-key-row">
+            <input id="maps-api-key" data-map-key type="password" autocomplete="off" placeholder="Paste Maps JS key" class="bg-black border border-white/20 p-3 text-white">
+            <button type="button" class="icon-btn" data-map-load>Load Places</button>
+          </div>
+          <div class="map-key-actions">
+            <button type="button" data-map-clear-key>Forget Key</button>
+            <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank" rel="noreferrer">Get a key</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-workbench">
+        <aside class="map-sidebar">
+          <div class="map-toolbar">
+            <button type="button" class="icon-btn" data-map-locate>Use My Location</button>
+            <button type="button" class="icon-btn" data-map-reset>Reset Kenya</button>
+          </div>
+          <form class="map-search" data-map-search-form>
+            <input name="query" type="search" placeholder="Search Kenya places..." class="bg-black border border-white/20 p-3 text-white" required>
+            <button type="submit" class="bg-red-600 text-white px-4 py-3 font-bold hover:bg-white hover:text-black transition-colors">Search</button>
+          </form>
+          <div class="map-categories" data-map-categories>
+            <button type="button" data-map-query="best hotels in Kenya">Hotels</button>
+            <button type="button" data-map-query="best restaurants in Kenya">Restaurants</button>
+            <button type="button" data-map-query="national parks in Kenya">Parks</button>
+            <button type="button" data-map-query="best beaches in Kenya">Beaches</button>
+            <button type="button" data-map-query="best cafes in Kenya">Cafes</button>
+            <button type="button" data-map-query="live music and nightlife in Kenya">Nightlife</button>
+            <button type="button" data-map-query="museums and cultural centers in Kenya">Culture</button>
+            <button type="button" data-map-query="markets and shopping malls in Kenya">Markets</button>
+          </div>
+          <div class="map-status" data-map-status>Enter your key and load places to pull live Google Places photos and details.</div>
+          <div class="map-results" data-map-results></div>
+        </aside>
+
+        <div class="map-stage">
+          <div class="place-gallery-shell">
+            <div class="place-gallery-head">
+              <div>
+                <p class="font-mono text-xs text-red-500 tracking-widest">DESTINATION GRID</p>
+                <h3>Places You May Want To Go</h3>
+              </div>
+              <span data-gallery-count>0 places</span>
+            </div>
+            <div class="place-gallery" data-place-gallery>
+              <div class="gallery-empty">
+                <strong>Load places to fill this with real destination images.</strong>
+                <p>Search hotels, restaurants, national parks, beaches, businesses, or cool joints across Kenya.</p>
+              </div>
+            </div>
+            <div class="map-route-card" data-route-card hidden></div>
+          </div>
+        </div>
+
+        <aside class="map-detail" data-place-detail>
+          <p class="font-mono text-xs text-red-500 tracking-widest">SELECT A PLACE</p>
+          <h3>Google Maps details appear here</h3>
+          <p class="font-serif text-gray-400">Click a hotel, restaurant, park, beach, business, or food spot card to view photos, ratings, address, hours, website, and route controls.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="planner" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <form class="bg-white/5 border border-white/10 p-8 rounded-xl hover:border-red-500/40 transition-colors" data-planner-form>
+        <h2 class="text-4xl font-bold mb-8">BUILD YOUR KENYA</h2>
+        <div class="grid gap-5">
+          <label class="grid gap-2 font-mono text-xs text-gray-400 tracking-widest">ROUTE
+            <select name="route" class="bg-black border border-white/20 p-4 text-white font-sans text-base" required>
+              <option value="Nairobi / Maasai Mara / Naivasha">Nairobi / Maasai Mara / Naivasha</option>
+              <option value="Mombasa / Diani / Lamu">Mombasa / Diani / Lamu</option>
+              <option value="Nairobi / Iten / Mount Kenya">Nairobi / Iten / Mount Kenya</option>
+              <option value="Food crawl / Music night / City design">Food crawl / Music night / City design</option>
+            </select>
+          </label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <label class="grid gap-2 font-mono text-xs text-gray-400 tracking-widest">DAYS
+              <input name="days" type="number" min="2" max="30" value="7" class="bg-black border border-white/20 p-4 text-white font-sans text-base" required>
+            </label>
+            <label class="grid gap-2 font-mono text-xs text-gray-400 tracking-widest">MONTH
+              <input name="month" type="month" class="bg-black border border-white/20 p-4 text-white font-sans text-base" required>
+            </label>
+          </div>
+          <label class="grid gap-2 font-mono text-xs text-gray-400 tracking-widest">STYLE
+            <select name="style" class="bg-black border border-white/20 p-4 text-white font-sans text-base" required>
+              <option value="Wildlife and landscape">Wildlife and landscape</option>
+              <option value="Food and nightlife">Food and nightlife</option>
+              <option value="Culture and coast">Culture and coast</option>
+              <option value="Training and adventure">Training and adventure</option>
+            </select>
+          </label>
+          <label class="grid gap-2 font-mono text-xs text-gray-400 tracking-widest">NOTES
+            <textarea name="notes" class="bg-black border border-white/20 p-4 text-white font-sans text-base min-h-[150px]" placeholder="Add must-see places, food stops, or people traveling."></textarea>
+          </label>
+          <button class="bg-red-600 text-white px-8 py-3 font-bold hover:bg-white hover:text-black transition-colors hover-trigger justify-self-start" type="submit" data-cursor="hovered">SAVE ITINERARY</button>
+        </div>
+      </form>
+
+      <div class="relative bg-white/5 border border-white/10 p-8 rounded-xl overflow-hidden">
+        <div class="absolute top-0 right-0 p-6 opacity-10 pointer-events-none"><h2 class="text-[12vw] font-bold leading-none text-stroke">BOARD</h2></div>
+        <div class="relative z-10">
+          <h2 class="text-4xl font-bold mb-3">YOUR BOARD</h2>
+          <p class="font-serif text-gray-400 mb-8">Saved itineraries stay in this browser until you remove them.</p>
+          <div class="itinerary space-y-4" data-itinerary></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 bg-black border border-white/10 p-8 rounded-xl">
+      <h3 class="font-mono text-red-500 mb-2">DISPATCH</h3>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">KEEP THE THREAD</h2>
+      <p class="font-serif text-gray-400 mb-8 max-w-2xl">Save an email locally for future updates. This static demo does not transmit it anywhere.</p>
+      <form class="flex flex-col md:flex-row gap-4" data-contact-form>
+        <input name="email" type="email" placeholder="you@example.com" class="flex-1 bg-black border border-white/20 p-4 text-white" required>
+        <button class="bg-green-600 text-white px-8 py-3 font-bold hover:bg-white hover:text-black transition-colors hover-trigger" type="submit" data-cursor="hovered">SAVE DISPATCH</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

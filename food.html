@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food | Kenya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="original-page antialiased selection:bg-red-600 selection:text-white">
+  <nav class="original-nav fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center mix-blend-difference text-white transition-all duration-300">
+    <a href="index.html" class="text-2xl font-bold tracking-tighter hover-trigger cursor-pointer" data-cursor="hovered"><span class="text-red-600">K</span>ENYA<span class="text-green-600">.</span></a>
+    <div class="hidden md:flex gap-5 font-mono text-xs tracking-widest">
+      <a href="music.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">MUSIC</a>
+      <a href="food.html" class="text-red-500 transition-colors hover-trigger" data-cursor="hovered">FOOD</a>
+      <a href="culture.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">CULTURE</a>
+      <a href="plan.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">PLAN</a>
+      <a href="constitution.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">CONSTITUTION</a>
+      <a href="about.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">ABOUT</a>
+    </div>
+    <a href="plan.html" class="border border-white px-4 py-2 text-xs font-bold hover:bg-white hover:text-black transition-all hover-trigger" data-cursor="hovered">VISIT NOW</a>
+  </nav>
+
+  <main class="pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-black to-[#1a1505] min-h-screen">
+    <div class="text-center mb-16">
+      <h3 class="font-mono text-red-500 mb-2">CATALOG 02</h3>
+      <h1 class="text-7xl md:text-9xl font-bold glitch" data-text="THE FLAVOR">THE FLAVOR</h1>
+      <p class="font-serif text-xl text-gray-400 mt-4 max-w-2xl mx-auto">A culinary journey through smoke, spice, starch, and coast. Click a dish to reveal the recipe secrets.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div class="food-card group h-[500px] perspective-1000 cursor-pointer hover-trigger" data-cursor="hovered">
+        <div class="food-card-inner relative w-full h-full">
+          <div class="food-card-front absolute w-full h-full rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/nyama_choma.jpg" class="w-full h-full object-cover" alt="Nyama Choma with kachumbari">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-8"><h3 class="text-4xl font-bold text-red-500">NYAMA CHOMA</h3><p class="font-mono text-xs text-gray-300 mt-2">GRILL • SOCIAL</p></div>
+          </div>
+          <div class="food-card-back absolute w-full h-full bg-zinc-900 rounded-xl p-8 flex flex-col justify-center items-center text-center border border-red-500/30">
+            <h3 class="text-2xl font-bold text-red-500 mb-4">THE SECRET</h3><ul class="text-sm text-gray-300 space-y-2 mb-6 font-mono"><li>Goat or Beef Ribs</li><li>Salt and Lemon</li><li>Charcoal Heat</li><li>Kachumbari</li></ul>
+            <button class="bg-red-500 text-white px-6 py-2 font-bold text-sm hover:bg-white hover:text-black transition-colors" type="button" data-recipe="nyama">VIEW RECIPE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card group h-[500px] perspective-1000 cursor-pointer hover-trigger" data-cursor="hovered">
+        <div class="food-card-inner relative w-full h-full">
+          <div class="food-card-front absolute w-full h-full rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://live.staticflickr.com/2672/3738144203_6737dea5e1_o.jpg" class="w-full h-full object-cover" alt="Ugali and sukuma wiki">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-8"><h3 class="text-4xl font-bold text-green-500">UGALI & SUKUMA</h3><p class="font-mono text-xs text-gray-300 mt-2">STAPLE • HOME</p></div>
+          </div>
+          <div class="food-card-back absolute w-full h-full bg-zinc-900 rounded-xl p-8 flex flex-col justify-center items-center text-center border border-green-500/30">
+            <h3 class="text-2xl font-bold text-green-500 mb-4">NATIONAL TABLE</h3><ul class="text-sm text-gray-300 space-y-2 mb-6 font-mono"><li>Maize Flour</li><li>Water and Salt</li><li>Sukuma Wiki</li><li>Onion and Tomato</li></ul>
+            <button class="bg-green-500 text-white px-6 py-2 font-bold text-sm hover:bg-white hover:text-black transition-colors" type="button" data-recipe="ugali">VIEW RECIPE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card group h-[500px] perspective-1000 cursor-pointer hover-trigger" data-cursor="hovered">
+        <div class="food-card-inner relative w-full h-full">
+          <div class="food-card-front absolute w-full h-full rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://static1.squarespace.com/static/5a419c0118b27d418cc2e96f/5bc3db9ee4966bccb5791a3d/6576c7b42deb0069500a3616/1764540109023/public.jpeg?format=1500w" class="w-full h-full object-cover" alt="Kenyan beef pilau with kachumbari">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-8"><h3 class="text-4xl font-bold text-yellow-500">PILAU</h3><p class="font-mono text-xs text-gray-300 mt-2">COASTAL • SPICED RICE</p></div>
+          </div>
+          <div class="food-card-back absolute w-full h-full bg-zinc-900 rounded-xl p-8 flex flex-col justify-center items-center text-center border border-yellow-500/30">
+            <h3 class="text-2xl font-bold text-yellow-500 mb-4">COASTAL SPICE</h3><ul class="text-sm text-gray-300 space-y-2 mb-6 font-mono"><li>Basmati Rice</li><li>Pilau Masala</li><li>Beef or Chicken</li><li>Garlic and Ginger</li></ul>
+            <button class="bg-yellow-500 text-black px-6 py-2 font-bold text-sm hover:bg-white transition-colors" type="button" data-recipe="pilau">VIEW RECIPE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card group h-[500px] perspective-1000 cursor-pointer hover-trigger" data-cursor="hovered">
+        <div class="food-card-inner relative w-full h-full">
+          <div class="food-card-front absolute w-full h-full rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/kenyan_chapati.jpg" class="w-full h-full object-cover" alt="Kenyan chapati flatbreads">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-8"><h3 class="text-4xl font-bold text-orange-500">CHAPATI</h3><p class="font-mono text-xs text-gray-300 mt-2">BREAD • STAPLE</p></div>
+          </div>
+          <div class="food-card-back absolute w-full h-full bg-zinc-900 rounded-xl p-8 flex flex-col justify-center items-center text-center border border-orange-500/30">
+            <h3 class="text-2xl font-bold text-orange-500 mb-4">SOFT LAYERS</h3><ul class="text-sm text-gray-300 space-y-2 mb-6 font-mono"><li>Flour</li><li>Warm Water and Oil</li><li>Salt</li><li>Pan Fried</li></ul>
+            <a href="plan.html" class="bg-orange-500 text-white px-6 py-2 font-bold text-sm hover:bg-white hover:text-black transition-colors">ADD TO TRIP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="recipe-modal" role="dialog" aria-modal="true" aria-label="Recipe details">
+    <div class="modal-panel">
+      <div class="modal-top"><h3 data-recipe-title>Recipe</h3><button class="icon-btn" type="button" data-close-modal>Close</button></div>
+      <p class="eyebrow">Ingredients</p><ul data-recipe-ingredients></ul>
+      <p class="eyebrow">Method</p><ol data-recipe-steps></ol>
+      <a class="btn green" href="plan.html">Save this into a trip</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music | Kenya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="original-page antialiased selection:bg-red-600 selection:text-white">
+  <nav class="original-nav fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center mix-blend-difference text-white transition-all duration-300">
+    <a href="index.html" class="text-2xl font-bold tracking-tighter hover-trigger cursor-pointer" data-cursor="hovered"><span class="text-red-600">K</span>ENYA<span class="text-green-600">.</span></a>
+    <div class="hidden md:flex gap-5 font-mono text-xs tracking-widest">
+      <a href="music.html" class="text-red-500 transition-colors hover-trigger" data-cursor="hovered">MUSIC</a>
+      <a href="food.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">FOOD</a>
+      <a href="culture.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">CULTURE</a>
+      <a href="plan.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">PLAN</a>
+      <a href="constitution.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">CONSTITUTION</a>
+      <a href="about.html" class="hover:text-red-500 transition-colors hover-trigger" data-cursor="hovered">ABOUT</a>
+    </div>
+    <a href="plan.html" class="border border-white px-4 py-2 text-xs font-bold hover:bg-white hover:text-black transition-all hover-trigger" data-cursor="hovered">VISIT NOW</a>
+  </nav>
+
+  <main class="pt-32 pb-20 px-6 md:px-20 bg-gradient-to-b from-black to-[#1a0505] min-h-screen">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
+      <div>
+        <h3 class="font-mono text-red-500 mb-2">CATALOG 01</h3>
+        <h1 class="text-7xl md:text-9xl font-bold glitch" data-text="THE SOUND">THE SOUND</h1>
+        <p class="font-serif text-xl text-gray-400 mt-4 max-w-lg">From Benga to Gengetone. Explore the genres and artists that define Kenyan rhythm.</p>
+      </div>
+      <div class="mt-8 md:mt-0">
+        <div class="flex gap-2 flex-wrap" data-filter-group="music">
+          <button class="filter-btn active px-4 py-2 border border-white/30 text-xs font-mono hover:bg-white hover:text-black transition-all" data-filter="all" type="button">ALL</button>
+          <button class="filter-btn px-4 py-2 border border-white/30 text-xs font-mono hover:bg-white hover:text-black transition-all" data-filter="benga" type="button">BENGA</button>
+          <button class="filter-btn px-4 py-2 border border-white/30 text-xs font-mono hover:bg-white hover:text-black transition-all" data-filter="gengetone" type="button">GENGETONE</button>
+          <button class="filter-btn px-4 py-2 border border-white/30 text-xs font-mono hover:bg-white hover:text-black transition-all" data-filter="afro" type="button">AFROBEATS</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="music-flag-panel mb-12 hover-trigger" data-cursor="hovered">
+      <img src="assets/kenya-grunge-flag.svg" alt="Grunge Kenya flag with shield">
+      <div class="absolute inset-0 z-10 flex items-end p-8">
+        <div>
+          <h2 class="text-4xl md:text-6xl font-bold mb-3">FLAG, SHIELD, SOUND</h2>
+          <p class="font-serif text-gray-300 max-w-2xl">The grunge flag reference now anchors the music page before the artist catalog.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-6">
+        <div>
+          <h2 class="text-4xl md:text-6xl font-bold leading-none">FOLK & INSTRUMENTAL QUEUE</h2>
+          <p class="font-serif text-gray-400 mt-3 max-w-2xl">Traditional roots, benga guitar lines, nyatiti textures, and ceremonial sound from different Kenyan communities.</p>
+        </div>
+        <button class="border border-red-500 text-red-500 px-5 py-3 font-mono text-xs hover:bg-red-500 hover:text-white transition-colors hover-trigger" type="button" data-open-player data-cursor="hovered">OPEN FULL PLAYER</button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <article class="folk-track-card hover-trigger" data-cursor="hovered">
+          <div>
+            <p class="font-mono text-xs text-red-500">LUO / NYATITI FOLK</p>
+            <h3>Ayub Ogada<br>Kothbiro</h3>
+            <p class="text-sm text-gray-400">Sparse nyatiti pulse and voice-led roots music from western Kenya.</p>
+          </div>
+          <button class="icon-btn mt-6" type="button" data-open-player data-player-track="2">Play Track</button>
+        </article>
+        <article class="folk-track-card hover-trigger" data-cursor="hovered">
+          <div>
+            <p class="font-mono text-xs text-green-500">KAMBA / TRADITIONAL FOLK</p>
+            <h3>Kakai Kilonzo<br>Munguti</h3>
+            <p class="text-sm text-gray-400">Kamba guitar tradition with old-school storytelling energy.</p>
+          </div>
+          <button class="icon-btn mt-6" type="button" data-open-player data-player-track="3">Play Track</button>
+        </article>
+        <article class="folk-track-card hover-trigger" data-cursor="hovered">
+          <div>
+            <p class="font-mono text-xs text-red-500">LUO / BENGA GUITAR</p>
+            <h3>D.O. Misiani<br>Nyar Gombe</h3>
+            <p class="text-sm text-gray-400">A classic benga line from Shirati Jazz, built around bright guitar motion.</p>
+          </div>
+          <button class="icon-btn mt-6" type="button" data-open-player data-player-track="4">Play Track</button>
+        </article>
+        <article class="folk-track-card hover-trigger" data-cursor="hovered">
+          <div>
+            <p class="font-mono text-xs text-green-500">MAASAI / INSTRUMENTAL</p>
+            <h3>Angela Laur<br>Maasai Tribe</h3>
+            <p class="text-sm text-gray-400">A ceremonial, instrumental-style piece added for a different regional feel.</p>
+          </div>
+          <button class="icon-btn mt-6" type="button" data-open-player data-player-track="5">Play Track</button>
+        </article>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-filter-list="music">
+      <article class="catalog-card group bg-white/5 border border-white/10 p-6 rounded-xl hover:border-red-500/50 transition-colors" data-category="afro">
+        <div class="relative aspect-square mb-6 overflow-hidden rounded-lg bg-black">
+          <img class="artist-photo" src="https://image.okayafrica.com/155861.webp?imageId=155861&amp;width=960&amp;height=644&amp;format=jpg" alt="Sauti Sol">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+            <button class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform cursor-pointer hover-trigger" type="button" data-open-player data-player-track="0" data-cursor="hovered">▶</button>
+          </div>
+          <div class="absolute top-2 right-2 bg-red-600 text-xs font-bold px-2 py-1 rounded">LEGEND</div>
+        </div>
+        <div class="flex justify-between items-start"><div><h3 class="text-2xl font-bold mb-1 group-hover:text-red-500 transition-colors">Sauti Sol</h3><p class="font-mono text-xs text-gray-500 mb-3">AFROBEATS • POP</p></div><span class="text-xs border border-white/20 px-2 py-1 rounded font-mono">ACTIVE</span></div>
+        <p class="text-sm text-gray-400 mb-4">Kenya's biggest modern musical export, blending Afro-pop with soulful harmonies.</p>
+        <div class="flex gap-2"><span class="text-xs bg-white/10 px-2 py-1 rounded">Suzanna</span><span class="text-xs bg-white/10 px-2 py-1 rounded">Melanin</span></div>
+      </article>
+
+      <article class="catalog-card group bg-white/5 border border-white/10 p-6 rounded-xl hover:border-red-500/50 transition-colors" data-category="gengetone">
+        <div class="relative aspect-square mb-6 overflow-hidden rounded-lg bg-black">
+          <img class="artist-photo" src="https://is1-ssl.mzstatic.com/image/thumb/Features221/v4/db/5e/d8/db5ed87a-5d2d-a102-f5da-8de542b21355/mzl.skzlydgm.png/800x800bb.jpg" alt="Khaligraph Jones">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40"><button class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform cursor-pointer hover-trigger" type="button" data-open-player data-player-track="1" data-cursor="hovered">▶</button></div>
+        </div>
+        <div class="flex justify-between items-start"><div><h3 class="text-2xl font-bold mb-1 group-hover:text-red-500 transition-colors">Khaligraph Jones</h3><p class="font-mono text-xs text-gray-500 mb-3">HIP HOP • NAIROBI</p></div><span class="text-xs border border-white/20 px-2 py-1 rounded font-mono">ACTIVE</span></div>
+        <p class="text-sm text-gray-400 mb-4">Heavy bars, Nairobi confidence, and a continental rap footprint.</p>
+        <div class="flex gap-2"><span class="text-xs bg-white/10 px-2 py-1 rounded">Mazishi</span><span class="text-xs bg-white/10 px-2 py-1 rounded">Yego</span></div>
+      </article>
+
+      <article class="catalog-card group bg-white/5 border border-white/10 p-6 rounded-xl hover:border-red-500/50 transition-colors" data-category="benga">
+        <div class="relative aspect-square mb-6 overflow-hidden rounded-lg bg-black">
+          <img class="artist-photo" src="https://musicinafrica.net/wp-content/uploads/2019/02/ayub.jpg" alt="Ayub Ogada">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40"><button class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform cursor-pointer hover-trigger" type="button" data-open-player data-player-track="2" data-cursor="hovered">▶</button></div>
+        </div>
+        <div class="flex justify-between items-start"><div><h3 class="text-2xl font-bold mb-1 group-hover:text-red-500 transition-colors">Ayub Ogada</h3><p class="font-mono text-xs text-gray-500 mb-3">NYATITI • ROOTS</p></div><span class="text-xs border border-white/20 px-2 py-1 rounded font-mono">LEGACY</span></div>
+        <p class="text-sm text-gray-400 mb-4">Minimal strings, Luo roots, and a sound that crossed into global cinema.</p>
+        <div class="flex gap-2"><span class="text-xs bg-white/10 px-2 py-1 rounded">Koth Biro</span><span class="text-xs bg-white/10 px-2 py-1 rounded">Nyatiti</span></div>
+      </article>
+
+      <article class="catalog-card group bg-white/5 border border-white/10 p-6 rounded-xl hover:border-red-500/50 transition-colors" data-category="gengetone">
+        <div class="relative aspect-square mb-6 overflow-hidden rounded-lg bg-black"><img class="artist-photo" src="https://bazeradio.co.ke/storage/2023/08/Baze-radio-Ethic-Entertainment.png" alt="Ethic Entertainment"></div>
+        <div class="flex justify-between items-start"><div><h3 class="text-2xl font-bold mb-1 group-hover:text-red-500 transition-colors">Ethic Entertainment</h3><p class="font-mono text-xs text-gray-500 mb-3">GENGETONE • STREET</p></div><span class="text-xs border border-white/20 px-2 py-1 rounded font-mono">WAVE</span></div>
+        <p class="text-sm text-gray-400 mb-4">Youth slang, club pressure, and the rise of a new Nairobi street sound.</p>
+        <a href="food.html" class="inline-block border-b border-white hover:text-red-500 hover:border-red-500">PAIR WITH STREET FOOD</a>
+      </article>
+
+      <article class="catalog-card group bg-white/5 border border-white/10 p-6 rounded-xl hover:border-red-500/50 transition-colors" data-category="benga">
+        <div class="relative aspect-square mb-6 overflow-hidden rounded-lg bg-black"><img class="artist-photo" src="https://cdn.standardmedia.co.ke/images/friday/remembering_fadhili_6206b00159927.jpg" alt="Fadhili William"></div>
+        <div class="flex justify-between items-start"><div><h3 class="text-2xl font-bold mb-1 group-hover:text-red-500 transition-colors">Fadhili William</h3><p class="font-mono text-xs text-gray-500 mb-3">CLASSIC • MALAÏKA</p></div><span class="text-xs border border-white/20 px-2 py-1 rounded font-mono">CLASSIC</span></div>
+        <p class="text-sm text-gray-400 mb-4">A foundational East African voice tied to one of the region's most enduring songs.</p>
+        <a href="culture.html" class="inline-block border-b border-white hover:text-red-500 hover:border-red-500">TRACE THE ROOTS</a>
+      </article>
+
+      <article class="catalog-card group bg-white/5 border border-white/10 p-6 rounded-xl hover:border-red-500/50 transition-colors" data-category="afro">
+        <div class="relative aspect-square mb-6 overflow-hidden rounded-lg bg-black"><img class="artist-photo" src="https://yt3.googleusercontent.com/z7A5LamFCrxjVUL9i5yoPEAi55jB6fs5Bi6mkJ5hNX705Uy6Vj0j0Dd_bDnnMX6XYt2-6dIdcg=s900-c-k-c0x00ffffff-no-rj" alt="Nadia Mukami"></div>
+        <div class="flex justify-between items-start"><div><h3 class="text-2xl font-bold mb-1 group-hover:text-red-500 transition-colors">Nadia Mukami</h3><p class="font-mono text-xs text-gray-500 mb-3">AFRO-POP • VOCAL</p></div><span class="text-xs border border-white/20 px-2 py-1 rounded font-mono">ACTIVE</span></div>
+        <p class="text-sm text-gray-400 mb-4">Contemporary Kenyan pop with melodic hooks and radio-ready polish.</p>
+        <a href="plan.html" class="inline-block border-b border-white hover:text-red-500 hover:border-red-500">SAVE A NIGHT OUT</a>
+      </article>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
