@@ -442,7 +442,7 @@ function initKenyaMapExplorer() {
   if (!gallery) return;
 
   const savedKey = localStorage.getItem("kenyaGoogleMapsKey") || defaultGoogleMapsKey;
-  keyInput.value = savedKey;
+  if (keyInput) keyInput.value = savedKey;
 
   const state = {
     placesReady: false,
@@ -638,7 +638,7 @@ function initKenyaMapExplorer() {
       state.places = kenyaSeedDestinations;
       renderResults(state.places);
       renderGallery(state.places);
-      setStatus("Showing curated Kenya destination images. Load places to search live Google Places data.");
+      setStatus("Showing curated Kenya destination images. Live Google Places data is not available yet.");
       return;
     }
 
@@ -709,13 +709,13 @@ function initKenyaMapExplorer() {
   }
 
   async function bootPlaces() {
-    const apiKey = keyInput.value.trim();
+    const apiKey = (keyInput?.value || savedKey || "").trim();
     if (!apiKey) {
-      setStatus("Paste a Google Maps API key first. It is saved only in this browser.");
+      setStatus("Curated Kenya destination images are showing.");
       return;
     }
 
-    localStorage.setItem("kenyaGoogleMapsKey", apiKey);
+    if (keyInput) localStorage.setItem("kenyaGoogleMapsKey", apiKey);
     setStatus("Loading Google Places...");
     try {
       await loadGoogleMaps(apiKey);
@@ -729,10 +729,10 @@ function initKenyaMapExplorer() {
     }
   }
 
-  loadButton.addEventListener("click", bootPlaces);
-  clearKeyButton.addEventListener("click", () => {
+  loadButton?.addEventListener("click", bootPlaces);
+  clearKeyButton?.addEventListener("click", () => {
     localStorage.removeItem("kenyaGoogleMapsKey");
-    keyInput.value = "";
+    if (keyInput) keyInput.value = "";
     setStatus("Saved key removed from this browser.");
   });
   locateButton.addEventListener("click", requestLocation);
@@ -762,7 +762,7 @@ function initKenyaMapExplorer() {
   state.places = kenyaSeedDestinations;
   renderResults(state.places);
   renderGallery(state.places);
-  setStatus("Curated Kenya destination images are ready. Load places for live Google results.");
+  setStatus("Curated Kenya destination images are ready while live place details initialize.");
 
   if (savedKey) bootPlaces();
 }
